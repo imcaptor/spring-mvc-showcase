@@ -64,7 +64,7 @@ public class MessageConvertersController {
 		return "Read from JSON: " + bean;
 	}
 
-	@RequestMapping(value="/json", method=RequestMethod.GET)
+	@RequestMapping(value="/json", method=RequestMethod.GET, produces = "application/json;charset=UTF-8")
 	public @ResponseBody JavaBean writeJson() {
 		return new JavaBean("bar", "apple");
 	}
