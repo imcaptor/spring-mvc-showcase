@@ -68,6 +68,11 @@ public class MessageConvertersController {
 	public @ResponseBody JavaBean writeJson() {
 		return new JavaBean("bar", "apple");
 	}
+	
+	@RequestMapping(value="/testjson", method=RequestMethod.GET, produces = "application/json;charset=UTF-8")
+	public @ResponseBody String writeJsonString() {
+		return "{'key':'value','key2':[1,2,3]}";
+	}
 
 	// AtomFeedHttpMessageConverter (requires Rome on the classpath - useful for serving Atom feeds)
 
